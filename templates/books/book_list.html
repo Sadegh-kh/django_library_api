@@ -1,0 +1,24 @@
+{% extends 'parents/base.html' %}
+
+{% block title %}
+Book List
+{% endblock title %}
+
+{% block content %}
+<h1>All Books</h1>
+<ol>
+{% for book in books %}
+
+    <li><p>{{book.title}}</p>
+        <p>{{book.subtitle}}</p>
+        <p>by {{book.author}}</p>
+    </li>
+
+<br><br>
+{% endfor %}
+</ol>
+
+{% endblock content %}
+
+
+
